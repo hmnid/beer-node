@@ -1,5 +1,6 @@
 services:
   remnanode:
+		env_file: .env
     container_name: remnanode
     hostname: remnanode
     image: remnawave/node:latest
