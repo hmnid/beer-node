@@ -1,4 +1,7 @@
-curl -fsSL https://get.docker.com | sh
+if ! command -v docker > dev/null 2>&1
+then
+	curl -fsSL https://get.docker.com | sh
+fi
 mkdir -p /var/log/remnanode
 apt install logrotate
 tee /etc/logrotate.d/remnanode > /dev/null <<EOF
