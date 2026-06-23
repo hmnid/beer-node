@@ -1,6 +1,6 @@
 services:
   remnanode:
-		env_file: .env
+    env_file: .env
     container_name: remnanode
     hostname: remnanode
     image: remnawave/node:latest
@@ -17,4 +17,3 @@ services:
       - SECRET_KEY=${SECRET_KEY}
     volumes:
       - '/var/log/remnanode:/var/log/remnanode'
-
